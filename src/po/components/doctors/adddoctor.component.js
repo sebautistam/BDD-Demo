@@ -36,6 +36,19 @@ class AddDoctorComponent extends BaseComponent {
         return this.rootEl.$('button.e-dlg-closeicon-btn');
     }
 
+    /**
+     * @param button {'submit' | 'close'}
+     */
+
+    async clickButton(button) {
+        if (button.toLowerCase() === 'submit') {
+            await this.submitBtn.click();
+        }
+        else if (button.toLowerCase() === 'close'){
+            await this.closeBtn.click();
+        }
+    }
+
 }
 
 module.exports = AddDoctorComponent;
