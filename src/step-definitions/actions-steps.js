@@ -7,3 +7,4 @@ const { pages } = require('../po'); // creates a new page object from object ext
 Given ('I open {string} page', function(pageName) {
     return pages(pageName).open();
 });
+
